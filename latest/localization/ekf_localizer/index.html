@@ -14879,6 +14879,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#for-diagnostics" class="md-nav__link">
+    For diagnostics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#misc" class="md-nav__link">
+    Misc
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -14949,6 +14963,33 @@
   <a href="#test-result-with-autoware-ndt" class="md-nav__link">
     Test Result with Autoware NDT
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagnostics" class="md-nav__link">
+    Diagnostics
+  </a>
+  
+    <nav class="md-nav" aria-label="Diagnostics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-conditions-that-result-in-a-warn-state" class="md-nav__link">
+    The conditions that result in a WARN state
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-conditions-that-result-in-an-error-state" class="md-nav__link">
+    The conditions that result in an ERROR state
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -15079,6 +15120,12 @@
 <li>
 <p>ekf_twist_with_covariance (geometry_msgs/TwistWithCovarianceStamped)</p>
 <p>The estimated twist with covariance.</p>
+</li>
+</ul>
+<ul>
+<li>
+<p>diagnostics (diagnostic_msgs/DiagnosticArray)</p>
+<p>The diagnostic information.</p>
 </li>
 </ul>
 <h3 id="published-tf">Published TF<a class="headerlink" href="#published-tf" title="Permanent link">#</a></h3>
@@ -15245,6 +15292,62 @@
 </tbody>
 </table>
 <p>note: process noise for positions x &amp; y are calculated automatically from nonlinear dynamics.</p>
+<h3 id="for-diagnostics">For diagnostics<a class="headerlink" href="#for-diagnostics" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+<th align="left">Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">pose_no_update_count_threshold_warn</td>
+<td align="left">size_t</td>
+<td align="left">The threshold at which a WARN state is triggered due to the Pose Topic update not happening continuously for a certain number of times.</td>
+<td align="left">50</td>
+</tr>
+<tr>
+<td align="left">pose_no_update_count_threshold_error</td>
+<td align="left">size_t</td>
+<td align="left">The threshold at which an ERROR state is triggered due to the Pose Topic update not happening continuously for a certain number of times.</td>
+<td align="left">250</td>
+</tr>
+<tr>
+<td align="left">twist_no_update_count_threshold_warn</td>
+<td align="left">size_t</td>
+<td align="left">The threshold at which a WARN state is triggered due to the Twist Topic update not happening continuously for a certain number of times.</td>
+<td align="left">50</td>
+</tr>
+<tr>
+<td align="left">twist_no_update_count_threshold_error</td>
+<td align="left">size_t</td>
+<td align="left">The threshold at which an ERROR state is triggered due to the Twist Topic update not happening continuously for a certain number of times.</td>
+<td align="left">250</td>
+</tr>
+</tbody>
+</table>
+<h3 id="misc">Misc<a class="headerlink" href="#misc" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+<th align="left">Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">threshold_observable_velocity_mps</td>
+<td align="left">double</td>
+<td align="left">Minimum value for velocity that will be used for EKF. Mainly used for dead zone in velocity sensor</td>
+<td align="left">0.0 (disabled)</td>
+</tr>
+</tbody>
+</table>
 <h2 id="how-to-tune-ekf-parameters">How to tune EKF parameters<a class="headerlink" href="#how-to-tune-ekf-parameters" title="Permanent link">#</a></h2>
 <h3 id="0-preliminaries">0. Preliminaries<a class="headerlink" href="#0-preliminaries" title="Permanent link">#</a></h3>
 <ul>
@@ -15280,6 +15383,22 @@ Increasing the number will improve the smoothness of the estimation, but may hav
 <img src="./media/ekf_autoware_res.png" width="600">
 </p>
 
+<h2 id="diagnostics">Diagnostics<a class="headerlink" href="#diagnostics" title="Permanent link">#</a></h2>
+<p align="center">
+<img src="./media/ekf_diagnostics.png" width="320">
+</p>
+
+<h3 id="the-conditions-that-result-in-a-warn-state">The conditions that result in a WARN state<a class="headerlink" href="#the-conditions-that-result-in-a-warn-state" title="Permanent link">#</a></h3>
+<ul>
+<li>The node is not in the activate state.</li>
+<li>The number of consecutive no measurement update via the Pose/Twist topic exceeds the <code>pose_no_update_count_threshold_warn</code>/<code>twist_no_update_count_threshold_warn</code>.</li>
+<li>The timestamp of the Pose/Twist topic is beyond the delay compensation range.</li>
+<li>The Pose/Twist topic is beyond the range of Mahalanobis distance for covariance estimation.</li>
+</ul>
+<h3 id="the-conditions-that-result-in-an-error-state">The conditions that result in an ERROR state<a class="headerlink" href="#the-conditions-that-result-in-an-error-state" title="Permanent link">#</a></h3>
+<ul>
+<li>The number of consecutive no measurement update via the Pose/Twist topic exceeds the <code>pose_no_update_count_threshold_error</code>/<code>twist_no_update_count_threshold_error</code>.</li>
+</ul>
 <h2 id="known-issues">Known issues<a class="headerlink" href="#known-issues" title="Permanent link">#</a></h2>
 <ul>
 <li>In the presence of multiple inputs with yaw estimation, yaw bias <code>b_k</code> in the current EKF state would not make any sense, since it is intended to capture the extrinsic parameter's calibration error of a sensor. Thus, future work includes introducing yaw bias for each sensor with yaw estimation.</li>
