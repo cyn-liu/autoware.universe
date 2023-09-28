@@ -15551,6 +15551,8 @@ When allowed, park in accordance with the specified policy(e.g pull over on left
 <li>Route is set with <code>allow_goal_modification=false</code> by default.</li>
 <li>ego-vehicle is in the same lane as the goal.</li>
 </ul>
+<p>If the target path contains a goal, modify the points of the path so that the path and the goal are connected smoothly. This process will change the shape of the path by the distance of <code>refine_goal_search_radius_range</code> from the goal. Note that this logic depends on the interpolation algorithm that will be executed in a later module (at the moment it uses spline interpolation), so it needs to be updated in the future.</p>
+<p><img alt="path_goal_refinement" src="../../image/path_goal_refinement.drawio.svg"></p>
 <p><img src="https://user-images.githubusercontent.com/39142679/237929955-c0adf01b-9e3c-45e3-848d-98cf11e52b65.png" width="600"></p>
 <h3 id="rough_goal_planner">rough_goal_planner<a class="headerlink" href="#rough_goal_planner" title="Permanent link">#</a></h3>
 <h4 id="pull-over-on-road-lane">pull over on road lane<a class="headerlink" href="#pull-over-on-road-lane" title="Permanent link">#</a></h4>
@@ -15739,11 +15741,11 @@ searched for in certain range of the shoulder lane.</p>
 <td align="left"><code>minimum_weighted_distance</code></td>
 </tr>
 <tr>
-<td align="left">path_priority</td>
+<td align="left">prioritize_goals_before_objects</td>
 <td align="left">[-]</td>
-<td align="left">string</td>
-<td align="left">In case <code>efficient_path</code> use a goal that can generate an efficient path( priority is <code>shift_parking</code> -&gt; <code>arc_forward_parking</code> -&gt; <code>arc_backward_parking</code>). In case <code>close_goal</code> use the closest goal to the original one.</td>
-<td align="left">efficient_path</td>
+<td align="left">bool</td>
+<td align="left">If there are objects that may need to be avoided, prioritize the goal in front of them</td>
+<td align="left">true</td>
 </tr>
 <tr>
 <td align="left">forward_goal_search_length</td>
@@ -15858,6 +15860,20 @@ The path is generated with a certain margin (default: <code>0.5 m</code>) from t
 <td align="left">double</td>
 <td align="left">maximum deceleration. it prevents sudden deceleration when a parking path cannot be found suddenly</td>
 <td align="left">1.0</td>
+</tr>
+<tr>
+<td align="left">path_priority</td>
+<td align="left">[-]</td>
+<td align="left">string</td>
+<td align="left">In case <code>efficient_path</code> use a goal that can generate an efficient path which is set in <code>efficient_path_order</code>. In case <code>close_goal</code> use the closest goal to the original one.</td>
+<td align="left">efficient_path</td>
+</tr>
+<tr>
+<td align="left">efficient_path_order</td>
+<td align="left">[-]</td>
+<td align="left">string</td>
+<td align="left">efficient order of pull over planner along lanes　excluding freespace pull over</td>
+<td align="left">["SHIFT", "ARC_FORWARD", "ARC_BACKWARD"]</td>
 </tr>
 </tbody>
 </table>
@@ -16053,8 +16069,8 @@ See also <a href="https://www.sciencedirect.com/science/article/pii/S14746670153
 <h3 id="freespace-parking">freespace parking<a class="headerlink" href="#freespace-parking" title="Permanent link">#</a></h3>
 <p>If the vehicle gets stuck with <code>lane_parking</code>, run <code>freespace_parking</code>.
 To run this feature, you need to set <code>parking_lot</code> to the map, <code>activate_by_scenario</code> of <a href="../../../costmap_generator/">costmap_generator</a> to <code>false</code> and <code>enable_freespace_parking</code> to <code>true</code></p>
-<p><img alt="pull_over_freespace_parking_flowchart" src="../../image/pull_over_freespace_parking_flowchart.drawio.svg">
-*Series execution with <code>avoidance_module</code> in the flowchart is under development.</p>
+<p><img alt="pull_over_freespace_parking_flowchart" src="../../image/pull_over_freespace_parking_flowchart.drawio.svg"></p>
+<p>Simultaneous execution with <code>avoidance_module</code> in the flowchart is under development.</p>
 <p><img src="https://user-images.githubusercontent.com/39142679/221167581-9a654810-2460-4a0c-8afd-7943ca877cf5.png" width="600"></p>
 <h4 id="unimplemented-parts-limitations-for-freespace-parking">Unimplemented parts / limitations for freespace parking<a class="headerlink" href="#unimplemented-parts-limitations-for-freespace-parking" title="Permanent link">#</a></h4>
 <ul>

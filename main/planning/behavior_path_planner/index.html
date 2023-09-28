@@ -15299,13 +15299,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#smooth-goal-connection" class="md-nav__link">
-    Smooth goal connection
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -15630,9 +15623,6 @@ Expansion parameters are defined for each module of the <code>behavior_path_plan
 <span class="p">};</span>
 </code></pre></div>
 <p>Click <a href="docs/behavior_path_planner_path_generation_design/">here</a> for details.</p>
-<h3 id="smooth-goal-connection">Smooth goal connection<a class="headerlink" href="#smooth-goal-connection" title="Permanent link">#</a></h3>
-<p>If the target path contains a goal, modify the points of the path so that the path and the goal are connected smoothly. This process will change the shape of the path by the distance of <code>refine_goal_search_radius_range</code> from the goal. Note that this logic depends on the interpolation algorithm that will be executed in a later module (at the moment it uses spline interpolation), so it needs to be updated in the future.</p>
-<p><img alt="path_goal_refinement" src="image/path_goal_refinement.drawio.svg"></p>
 <h2 id="references-external-links">References / External links<a class="headerlink" href="#references-external-links" title="Permanent link">#</a></h2>
 <p>This module depends on the external <a href="https://github.com/BehaviorTree/BehaviorTree.CPP">BehaviorTreeCpp</a> library.</p>
 <!-- cspell:ignore Vorobieva, Minoiu, Enache, Mammar, IFAC -->
