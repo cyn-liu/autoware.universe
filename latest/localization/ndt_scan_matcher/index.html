@@ -15554,6 +15554,11 @@
 <td>NDT reference frame</td>
 </tr>
 <tr>
+<td><code>map_frame</code></td>
+<td>string</td>
+<td>map frame</td>
+</tr>
+<tr>
 <td><code>input_sensor_points_queue_size</code></td>
 <td>int</td>
 <td>Subscriber queue size</td>
@@ -15561,7 +15566,7 @@
 <tr>
 <td><code>trans_epsilon</code></td>
 <td>double</td>
-<td>The maximum difference between two consecutive transformations in order to consider convergence</td>
+<td>The max difference between two consecutive transformations to consider convergence</td>
 </tr>
 <tr>
 <td><code>step_size</code></td>
@@ -15586,7 +15591,17 @@
 <tr>
 <td><code>converged_param_transform_probability</code></td>
 <td>double</td>
-<td>Threshold for deciding whether to trust the estimation result</td>
+<td>TP threshold for deciding whether to trust the estimation result (when converged_param_type = 0)</td>
+</tr>
+<tr>
+<td><code>converged_param_nearest_voxel_transformation_likelihood</code></td>
+<td>double</td>
+<td>NVTL threshold for deciding whether to trust the estimation result (when converged_param_type = 1)</td>
+</tr>
+<tr>
+<td><code>initial_estimate_particles_num</code></td>
+<td>int</td>
+<td>The number of particles to estimate initial pose</td>
 </tr>
 <tr>
 <td><code>lidar_topic_timeout_sec</code></td>
@@ -15594,9 +15609,24 @@
 <td>Tolerance of timestamp difference between current time and sensor pointcloud</td>
 </tr>
 <tr>
+<td><code>initial_pose_timeout_sec</code></td>
+<td>int</td>
+<td>Tolerance of timestamp difference between initial_pose and sensor pointcloud. [sec]</td>
+</tr>
+<tr>
+<td><code>initial_pose_distance_tolerance_m</code></td>
+<td>double</td>
+<td>Tolerance of distance difference between two initial poses used for linear interpolation. [m]</td>
+</tr>
+<tr>
 <td><code>num_threads</code></td>
 <td>int</td>
 <td>Number of threads used for parallel computing</td>
+</tr>
+<tr>
+<td><code>output_pose_covariance</code></td>
+<td>std::array<double></double></td>
+<td>The covariance of output pose</td>
 </tr>
 </tbody>
 </table>
@@ -15849,7 +15879,7 @@ Follow the next two instructions.</p>
 </table>
 <h2 id="scan-matching-score-based-on-de-grounded-lidar-scan">Scan matching score based on de-grounded LiDAR scan<a class="headerlink" href="#scan-matching-score-based-on-de-grounded-lidar-scan" title="Permanent link">#</a></h2>
 <h3 id="abstract_1">Abstract<a class="headerlink" href="#abstract_1" title="Permanent link">#</a></h3>
-<p>This is a function that using de-grounded LiDAR scan estimate scan matching score.This score can more accurately reflect the current localization performance.
+<p>This is a function that uses de-grounded LiDAR scan to estimate the scan matching score. This score can reflect the current localization performance more accurately.
 <a href="https://github.com/autowarefoundation/autoware.universe/issues/2044">related issue</a>.</p>
 <h3 id="parameters_3">Parameters<a class="headerlink" href="#parameters_3" title="Permanent link">#</a></h3>
 <!-- cspell: ignore degrounded -->
