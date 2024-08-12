@@ -13106,6 +13106,26 @@
     Assumptions / Known limits
   </a>
   
+    <nav class="md-nav" aria-label="Assumptions / Known limits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#external-emergency-heartbeat" class="md-nav__link">
+    External Emergency Heartbeat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commands-on-mode-changes" class="md-nav__link">
+    Commands on Mode changes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -13410,9 +13430,13 @@
 Otherwise, quick pedal changes at start/stop will not be possible, resulting in slow starts and creep down on hills.
 This functionality for starting/stopping was embedded in the source code but was removed because it was complex and could be achieved by parameters.</p>
 <h2 id="assumptions-known-limits">Assumptions / Known limits<a class="headerlink" href="#assumptions-known-limits" title="Permanent link">#</a></h2>
+<h3 id="external-emergency-heartbeat">External Emergency Heartbeat<a class="headerlink" href="#external-emergency-heartbeat" title="Permanent link">#</a></h3>
 <p>The parameter <code>check_external_emergency_heartbeat</code> (true by default) enables an emergency stop request from external modules.
 This feature requires a <code>~/input/external_emergency_stop_heartbeat</code> topic for health monitoring of the external module, and the vehicle_cmd_gate module will not start without the topic.
-The <code>check_external_emergency_heartbeat</code> parameter must be false when the "external emergency stop" function is not used.</p></div>
+The <code>check_external_emergency_heartbeat</code> parameter must be false when the "external emergency stop" function is not used.</p>
+<h3 id="commands-on-mode-changes">Commands on Mode changes<a class="headerlink" href="#commands-on-mode-changes" title="Permanent link">#</a></h3>
+<p>Output commands' topics: <code>turn_indicators_cmd</code>, <code>hazard_light</code> and <code>gear_cmd</code> are selected based on <code>gate_mode</code>.
+However, to ensure the continuity of commands, these commands will not change until the topics of new input commands arrive, even if a mode change occurs.</p></div>
 
 
 
