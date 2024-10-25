@@ -13276,21 +13276,18 @@ The listed features below does not always correspond to the latest implementatio
 <th>Description</th>
 <th>Arguments</th>
 <th align="center">Diagnostic equation</th>
-<th>Implemented function name</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Inverse velocity: Measured velocity has a different sign from the target velocity.</td>
-<td>measured velocity <span class="arithmatex">\(v\)</span>, target velocity <span class="arithmatex">\(\hat{v}\)</span>, and threshold velocity parameter <span class="arithmatex">\(k\)</span></td>
-<td align="center"><span class="arithmatex">\(v \hat{v} &lt; 0, \quad \lvert v \rvert &gt; k\)</span></td>
-<td><code>checkValidVelocityDeviation()</code></td>
+<td>measured velocity <span class="arithmatex">\(v\)</span>, target velocity <span class="arithmatex">\(\hat{v}\)</span>, and velocity parameter <span class="arithmatex">\(c\)</span></td>
+<td align="center"><span class="arithmatex">\(v \hat{v} &lt; 0, \quad \lvert v \rvert &gt; c\)</span></td>
 </tr>
 <tr>
 <td>Overspeed: Measured speed exceeds target speed significantly.</td>
-<td>measured velocity <span class="arithmatex">\(v\)</span>, target velocity <span class="arithmatex">\(\hat{v}\)</span>, and threshold ratio parameter <span class="arithmatex">\(r\)</span></td>
-<td align="center"><span class="arithmatex">\(\lvert v \rvert &gt; (1 + r) \lvert \hat{v} \rvert\)</span></td>
-<td><code>checkValidVelocityDeviation()</code></td>
+<td>measured velocity <span class="arithmatex">\(v\)</span>, target velocity <span class="arithmatex">\(\hat{v}\)</span>, ratio parameter <span class="arithmatex">\(r\)</span>, and offset parameter <span class="arithmatex">\(c\)</span></td>
+<td align="center"><span class="arithmatex">\(\lvert v \rvert &gt; (1 + r) \lvert \hat{v} \rvert + c\)</span></td>
 </tr>
 </tbody>
 </table>
@@ -13403,16 +13400,22 @@ The listed features below does not always correspond to the latest implementatio
 <td align="left">1.0</td>
 </tr>
 <tr>
-<td align="left"><code>thresholds.max_reverse_velocity</code></td>
+<td align="left"><code>thresholds.rolling_back_velocity</code></td>
 <td align="left">double</td>
 <td align="left">threshold velocity to valid the vehicle velocity [m/s]</td>
-<td align="left">WIP</td>
+<td align="left">0.5</td>
 </tr>
 <tr>
-<td align="left"><code>thresholds.max_over_velocity_ratio</code></td>
+<td align="left"><code>thresholds.over_velocity_offset</code></td>
+<td align="left">double</td>
+<td align="left">threshold velocity offset to valid the vehicle velocity [m/s]</td>
+<td align="left">2.0</td>
+</tr>
+<tr>
+<td align="left"><code>thresholds.over_velocity_ratio</code></td>
 <td align="left">double</td>
 <td align="left">threshold ratio to valid the vehicle velocity [*]</td>
-<td align="left">WIP</td>
+<td align="left">0.2</td>
 </tr>
 </tbody>
 </table></div>
