@@ -8,20 +8,20 @@
       
       
       
-        <link rel="canonical" href="https://autowarefoundation.github.io/autoware.universe/main/common/component_interface_specs/">
+        <link rel="canonical" href="https://autowarefoundation.github.io/autoware.universe/main/control/autoware_collision_detector/">
       
       
-        <link rel="prev" href="../bag_time_manager_rviz_plugin/">
+        <link rel="prev" href="../autoware_autonomous_emergency_braking/">
       
       
-        <link rel="next" href="../component_interface_utils/">
+        <link rel="next" href="../autoware_control_validator/">
       
       <link rel="icon" href="../../docs/assets/images/autoware-foundation.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.20">
     
     
       
-        <title>component_interface_specs - Autoware Universe Documentation</title>
+        <title>Collision Detector - Autoware Universe Documentation</title>
       
     
     
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#component_interface_specs" class="md-skip">
+        <a href="#collision-detector" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              component_interface_specs
+              Collision Detector
             
           </span>
         </div>
@@ -208,15 +208,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link md-tabs__link--active">
+      <a href="../../common" class="md-tabs__link">
         Common
       </a>
     </li>
@@ -226,6 +224,8 @@
         
   
   
+    
+  
 
 
   
@@ -237,7 +237,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../control/autoware_autonomous_emergency_braking/" class="md-tabs__link">
+      <a href="../autoware_autonomous_emergency_braking/" class="md-tabs__link md-tabs__link--active">
         Control
       </a>
     </li>
@@ -548,16 +548,16 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
       
       
         
@@ -580,7 +580,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
           Common
@@ -593,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../../common" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -646,7 +646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autoware_testing/design/autoware_testing-design" class="md-nav__link">
+      <a href="../../common/autoware_testing/design/autoware_testing-design" class="md-nav__link">
         autoware_testing
       </a>
     </li>
@@ -660,7 +660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fake_test_node/design/fake_test_node-design" class="md-nav__link">
+      <a href="../../common/fake_test_node/design/fake_test_node-design" class="md-nav__link">
         fake_test_node
       </a>
     </li>
@@ -674,7 +674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autoware_test_utils" class="md-nav__link">
+      <a href="../../common/autoware_test_utils" class="md-nav__link">
         Test Utils
       </a>
     </li>
@@ -797,7 +797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autoware_auto_common/design/comparisons" class="md-nav__link">
+      <a href="../../common/autoware_auto_common/design/comparisons" class="md-nav__link">
         comparisons
       </a>
     </li>
@@ -818,7 +818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autoware_grid_map_utils" class="md-nav__link">
+      <a href="../../common/autoware_grid_map_utils" class="md-nav__link">
         autoware_grid_map_utils
       </a>
     </li>
@@ -832,7 +832,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autoware_point_types" class="md-nav__link">
+      <a href="../../common/autoware_point_types" class="md-nav__link">
         autoware_point_types
       </a>
     </li>
@@ -846,7 +846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../geography_utils" class="md-nav__link">
+      <a href="../../common/geography_utils" class="md-nav__link">
         Geography Utils
       </a>
     </li>
@@ -860,7 +860,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../global_parameter_loader/Readme" class="md-nav__link">
+      <a href="../../common/global_parameter_loader/Readme" class="md-nav__link">
         Global Parameter Loader
       </a>
     </li>
@@ -874,7 +874,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../glog_component" class="md-nav__link">
+      <a href="../../common/glog_component" class="md-nav__link">
         Glog Component
       </a>
     </li>
@@ -888,7 +888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../interpolation" class="md-nav__link">
+      <a href="../../common/interpolation" class="md-nav__link">
         interpolation
       </a>
     </li>
@@ -902,7 +902,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../kalman_filter" class="md-nav__link">
+      <a href="../../common/kalman_filter" class="md-nav__link">
         Kalman Filter
       </a>
     </li>
@@ -916,7 +916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autoware_motion_utils" class="md-nav__link">
+      <a href="../../common/autoware_motion_utils" class="md-nav__link">
         Motion Utils
       </a>
     </li>
@@ -930,7 +930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autoware_motion_utils/docs/vehicle/vehicle" class="md-nav__link">
+      <a href="../../common/autoware_motion_utils/docs/vehicle/vehicle" class="md-nav__link">
         Vehicle Utils
       </a>
     </li>
@@ -944,7 +944,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../object_recognition_utils" class="md-nav__link">
+      <a href="../../common/object_recognition_utils" class="md-nav__link">
         Object Recognition Utils
       </a>
     </li>
@@ -958,7 +958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../osqp_interface/design/osqp_interface-design" class="md-nav__link">
+      <a href="../../common/osqp_interface/design/osqp_interface-design" class="md-nav__link">
         OSQP Interface
       </a>
     </li>
@@ -972,7 +972,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../perception_utils" class="md-nav__link">
+      <a href="../../common/perception_utils" class="md-nav__link">
         Perception Utils
       </a>
     </li>
@@ -986,7 +986,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../qp_interface/design/qp_interface-design" class="md-nav__link">
+      <a href="../../common/qp_interface/design/qp_interface-design" class="md-nav__link">
         QP Interface
       </a>
     </li>
@@ -1035,7 +1035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../signal_processing" class="md-nav__link">
+      <a href="../../common/signal_processing" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -1049,7 +1049,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../signal_processing/documentation/ButterworthFilter" class="md-nav__link">
+      <a href="../../common/signal_processing/documentation/ButterworthFilter" class="md-nav__link">
         Butterworth Filter
       </a>
     </li>
@@ -1070,7 +1070,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autoware_universe_utils" class="md-nav__link">
+      <a href="../../common/autoware_universe_utils" class="md-nav__link">
         autoware_universe_utils
       </a>
     </li>
@@ -1084,7 +1084,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../traffic_light_utils" class="md-nav__link">
+      <a href="../../common/traffic_light_utils" class="md-nav__link">
         traffic_light_utils
       </a>
     </li>
@@ -1133,7 +1133,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tvm_utility" class="md-nav__link">
+      <a href="../../common/tvm_utility" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -1147,7 +1147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tvm_utility/tvm-utility-yolo-v2-tiny-tests" class="md-nav__link">
+      <a href="../../common/tvm_utility/tvm-utility-yolo-v2-tiny-tests" class="md-nav__link">
         YOLOv2 Tiny Example
       </a>
     </li>
@@ -1240,7 +1240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autoware_perception_rviz_plugin" class="md-nav__link">
+      <a href="../../common/autoware_perception_rviz_plugin" class="md-nav__link">
         autoware_perception_rviz_plugin
       </a>
     </li>
@@ -1254,7 +1254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autoware_overlay_rviz_plugin/autoware_overlay_rviz_plugin" class="md-nav__link">
+      <a href="../../common/autoware_overlay_rviz_plugin/autoware_overlay_rviz_plugin" class="md-nav__link">
         autoware_overlay_rviz_plugin
       </a>
     </li>
@@ -1268,7 +1268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autoware_overlay_rviz_plugin/autoware_mission_details_overlay_rviz_plugin" class="md-nav__link">
+      <a href="../../common/autoware_overlay_rviz_plugin/autoware_mission_details_overlay_rviz_plugin" class="md-nav__link">
         autoware_mission_details_overlay_rviz_plugin
       </a>
     </li>
@@ -1282,7 +1282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bag_time_manager_rviz_plugin" class="md-nav__link">
+      <a href="../../common/bag_time_manager_rviz_plugin" class="md-nav__link">
         bag_time_manager_rviz_plugin
       </a>
     </li>
@@ -1296,7 +1296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../polar_grid/Readme" class="md-nav__link">
+      <a href="../../common/polar_grid/Readme" class="md-nav__link">
         polar_grid
       </a>
     </li>
@@ -1310,7 +1310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tier4_adapi_rviz_plugin" class="md-nav__link">
+      <a href="../../common/tier4_adapi_rviz_plugin" class="md-nav__link">
         tier4_adapi_rviz_plugin
       </a>
     </li>
@@ -1324,7 +1324,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tier4_api_utils" class="md-nav__link">
+      <a href="../../common/tier4_api_utils" class="md-nav__link">
         tier4_api_utils
       </a>
     </li>
@@ -1338,7 +1338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tier4_camera_view_rviz_plugin" class="md-nav__link">
+      <a href="../../common/tier4_camera_view_rviz_plugin" class="md-nav__link">
         tier4_camera_view_rviz_plugin
       </a>
     </li>
@@ -1352,7 +1352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tier4_datetime_rviz_plugin" class="md-nav__link">
+      <a href="../../common/tier4_datetime_rviz_plugin" class="md-nav__link">
         tier4_datetime_rviz_plugin
       </a>
     </li>
@@ -1366,7 +1366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tier4_localization_rviz_plugin" class="md-nav__link">
+      <a href="../../common/tier4_localization_rviz_plugin" class="md-nav__link">
         tier4_localization_rviz_plugin
       </a>
     </li>
@@ -1380,7 +1380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tier4_planning_rviz_plugin" class="md-nav__link">
+      <a href="../../common/tier4_planning_rviz_plugin" class="md-nav__link">
         tier4_planning_rviz_plugin
       </a>
     </li>
@@ -1394,7 +1394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tier4_state_rviz_plugin" class="md-nav__link">
+      <a href="../../common/tier4_state_rviz_plugin" class="md-nav__link">
         tier4_state_rviz_plugin
       </a>
     </li>
@@ -1408,7 +1408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tier4_system_rviz_plugin" class="md-nav__link">
+      <a href="../../common/tier4_system_rviz_plugin" class="md-nav__link">
         tier4_system_rviz_plugin
       </a>
     </li>
@@ -1422,7 +1422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tier4_traffic_light_rviz_plugin" class="md-nav__link">
+      <a href="../../common/tier4_traffic_light_rviz_plugin" class="md-nav__link">
         tier4_traffic_light_rviz_plugin
       </a>
     </li>
@@ -1436,7 +1436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tier4_vehicle_rviz_plugin" class="md-nav__link">
+      <a href="../../common/tier4_vehicle_rviz_plugin" class="md-nav__link">
         tier4_vehicle_rviz_plugin
       </a>
     </li>
@@ -1450,7 +1450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../traffic_light_recognition_marker_publisher/Readme" class="md-nav__link">
+      <a href="../../common/traffic_light_recognition_marker_publisher/Readme" class="md-nav__link">
         traffic_light_recognition_marker_publisher
       </a>
     </li>
@@ -1508,7 +1508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../goal_distance_calculator/Readme" class="md-nav__link">
+      <a href="../../common/goal_distance_calculator/Readme" class="md-nav__link">
         Goal Distance Calculator
       </a>
     </li>
@@ -1522,7 +1522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autoware_path_distance_calculator/Readme" class="md-nav__link">
+      <a href="../../common/autoware_path_distance_calculator/Readme" class="md-nav__link">
         Path Distance Calculator
       </a>
     </li>
@@ -1584,7 +1584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autoware_ad_api_specs" class="md-nav__link">
+      <a href="../../common/autoware_ad_api_specs" class="md-nav__link">
         autoware_ad_api_specs
       </a>
     </li>
@@ -1598,7 +1598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="." class="md-nav__link">
+      <a href="../../common/component_interface_specs" class="md-nav__link">
         component_interface_specs
       </a>
     </li>
@@ -1612,7 +1612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../component_interface_tools" class="md-nav__link">
+      <a href="../../common/component_interface_tools" class="md-nav__link">
         component_interface_tools
       </a>
     </li>
@@ -1626,7 +1626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../component_interface_utils" class="md-nav__link">
+      <a href="../../common/component_interface_utils" class="md-nav__link">
         component_interface_utils
       </a>
     </li>
@@ -1653,18 +1653,20 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
       
       
         
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
-      
-      
+          
         
           
         
@@ -1707,7 +1709,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           Control
@@ -1742,7 +1744,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../control/autoware_autonomous_emergency_braking/">Autoware autonomous emergency braking</a>
+          <a href="../autoware_autonomous_emergency_braking/">Autoware autonomous emergency braking</a>
           
         </div>
       
@@ -1766,18 +1768,18 @@
               
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
       
       
-        
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
       
       
         
@@ -1789,15 +1791,15 @@
       
         
         
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../../control/autoware_control_validator/">Autoware control validator</a>
+        <div class="md-nav__link md-nav__link--index md-nav__link--active">
+          <a href="./">Autoware collision detector</a>
           
         </div>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
-          Autoware control validator
+          Autoware collision detector
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1838,14 +1840,14 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../control/autoware_external_cmd_selector/">Autoware external cmd selector</a>
+          <a href="../autoware_control_validator/">Autoware control validator</a>
           
         </div>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_3">
           <span class="md-nav__icon md-icon"></span>
-          Autoware external cmd selector
+          Autoware control validator
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1886,14 +1888,14 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../control/autoware_joy_controller/">Autoware joy controller</a>
+          <a href="../autoware_external_cmd_selector/">Autoware external cmd selector</a>
           
         </div>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_4">
           <span class="md-nav__icon md-icon"></span>
-          Autoware joy controller
+          Autoware external cmd selector
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1934,14 +1936,14 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../control/autoware_lane_departure_checker/">Autoware lane departure checker</a>
+          <a href="../autoware_joy_controller/">Autoware joy controller</a>
           
         </div>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_5">
           <span class="md-nav__icon md-icon"></span>
-          Autoware lane departure checker
+          Autoware joy controller
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1977,42 +1979,22 @@
             
           
         
-          
-        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../control/autoware_mpc_lateral_controller/">Autoware mpc lateral controller</a>
-          
-            <label for="__nav_2_6">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
+          <a href="../autoware_lane_departure_checker/">Autoware lane departure checker</a>
           
         </div>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_6">
           <span class="md-nav__icon md-icon"></span>
-          Autoware mpc lateral controller
+          Autoware lane departure checker
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../control/autoware_mpc_lateral_controller/model_predictive_control_algorithm/" class="md-nav__link">
-        MPC Algorithm
-      </a>
-    </li>
-  
-
             
           
         </ul>
@@ -2045,22 +2027,42 @@
             
           
         
+          
+        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../control/autoware_obstacle_collision_checker/">Autoware obstacle collision checker</a>
+          <a href="../autoware_mpc_lateral_controller/">Autoware mpc lateral controller</a>
+          
+            <label for="__nav_2_7">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
           
         </div>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_7">
           <span class="md-nav__icon md-icon"></span>
-          Autoware obstacle collision checker
+          Autoware mpc lateral controller
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../autoware_mpc_lateral_controller/model_predictive_control_algorithm/" class="md-nav__link">
+        MPC Algorithm
+      </a>
+    </li>
+  
+
             
           
         </ul>
@@ -2098,14 +2100,14 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../control/autoware_operation_mode_transition_manager/">Autoware operation mode transition manager</a>
+          <a href="../autoware_obstacle_collision_checker/">Autoware obstacle collision checker</a>
           
         </div>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_8">
           <span class="md-nav__icon md-icon"></span>
-          Autoware operation mode transition manager
+          Autoware obstacle collision checker
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -2146,14 +2148,14 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../control/autoware_pid_longitudinal_controller/">Autoware pid longitudinal controller</a>
+          <a href="../autoware_operation_mode_transition_manager/">Autoware operation mode transition manager</a>
           
         </div>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_9">
           <span class="md-nav__icon md-icon"></span>
-          Autoware pid longitudinal controller
+          Autoware operation mode transition manager
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -2194,14 +2196,14 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../control/autoware_pure_pursuit/">Autoware pure pursuit</a>
+          <a href="../autoware_pid_longitudinal_controller/">Autoware pid longitudinal controller</a>
           
         </div>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_10">
           <span class="md-nav__icon md-icon"></span>
-          Autoware pure pursuit
+          Autoware pid longitudinal controller
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -2242,14 +2244,14 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../control/autoware_shift_decider/">Autoware shift decider</a>
+          <a href="../autoware_pure_pursuit/">Autoware pure pursuit</a>
           
         </div>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_11_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_11">
           <span class="md-nav__icon md-icon"></span>
-          Autoware shift decider
+          Autoware pure pursuit
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -2290,14 +2292,14 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../control/autoware_smart_mpc_trajectory_follower/">Autoware smart mpc trajectory follower</a>
+          <a href="../autoware_shift_decider/">Autoware shift decider</a>
           
         </div>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_12_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_12">
           <span class="md-nav__icon md-icon"></span>
-          Autoware smart mpc trajectory follower
+          Autoware shift decider
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -2338,14 +2340,14 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../control/autoware_trajectory_follower_base/">Autoware trajectory follower base</a>
+          <a href="../autoware_smart_mpc_trajectory_follower/">Autoware smart mpc trajectory follower</a>
           
         </div>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_13_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_13">
           <span class="md-nav__icon md-icon"></span>
-          Autoware trajectory follower base
+          Autoware smart mpc trajectory follower
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -2381,82 +2383,22 @@
             
           
         
-          
-        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../control/autoware_trajectory_follower_node/">Autoware trajectory follower node</a>
-          
-            <label for="__nav_2_14">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
+          <a href="../autoware_trajectory_follower_base/">Autoware trajectory follower base</a>
           
         </div>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_14_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_14">
           <span class="md-nav__icon md-icon"></span>
-          Autoware trajectory follower node
+          Autoware trajectory follower base
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-        
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_14_2" >
-      
-      
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_2_14_2" id="__nav_2_14_2_label" tabindex="0">
-          Design
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_14_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_2_14_2">
-          <span class="md-nav__icon md-icon"></span>
-          Design
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../control/autoware_trajectory_follower_node/design/simple_trajectory_follower-design/" class="md-nav__link">
-        Simple Trajectory Follower
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
             
           
         </ul>
@@ -2489,22 +2431,82 @@
             
           
         
+          
+        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../control/autoware_vehicle_cmd_gate/">Autoware vehicle cmd gate</a>
+          <a href="../autoware_trajectory_follower_node/">Autoware trajectory follower node</a>
+          
+            <label for="__nav_2_15">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
           
         </div>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_15_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_15">
           <span class="md-nav__icon md-icon"></span>
-          Autoware vehicle cmd gate
+          Autoware trajectory follower node
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_15_2" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_15_2" id="__nav_2_15_2_label" tabindex="0">
+          Design
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_15_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_15_2">
+          <span class="md-nav__icon md-icon"></span>
+          Design
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../autoware_trajectory_follower_node/design/simple_trajectory_follower-design/" class="md-nav__link">
+        Simple Trajectory Follower
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
             
           
         </ul>
@@ -2542,14 +2544,14 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../control/control_performance_analysis/">Control performance analysis</a>
+          <a href="../autoware_vehicle_cmd_gate/">Autoware vehicle cmd gate</a>
           
         </div>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_16_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_16">
           <span class="md-nav__icon md-icon"></span>
-          Control performance analysis
+          Autoware vehicle cmd gate
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -2590,12 +2592,60 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../control/predicted_path_checker/">Predicted path checker</a>
+          <a href="../control_performance_analysis/">Control performance analysis</a>
           
         </div>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_17_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_17">
+          <span class="md-nav__icon md-icon"></span>
+          Control performance analysis
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_18" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../predicted_path_checker/">Predicted path checker</a>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_18_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_18">
           <span class="md-nav__icon md-icon"></span>
           Predicted path checker
         </label>
@@ -13179,6 +13229,110 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    Purpose
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inner-workings-algorithms" class="md-nav__link">
+    Inner-workings / Algorithms
+  </a>
+  
+    <nav class="md-nav" aria-label="Inner-workings / Algorithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flow-chart" class="md-nav__link">
+    Flow chart
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithms" class="md-nav__link">
+    Algorithms
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-data" class="md-nav__link">
+    Check data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#object-filtering" class="md-nav__link">
+    Object Filtering
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-distance-to-nearest-object" class="md-nav__link">
+    Get distance to nearest object
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputs-outputs" class="md-nav__link">
+    Inputs / Outputs
+  </a>
+  
+    <nav class="md-nav" aria-label="Inputs / Outputs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    Input
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    Output
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assumptions-known-limits" class="md-nav__link">
+    Assumptions / Known limits
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -13195,8 +13349,151 @@
   
 
 
-<div><h1 id="component_interface_specs">component_interface_specs<a class="headerlink" href="#component_interface_specs" title="Permanent link">#</a></h1>
-<p>This package is a specification of component interfaces.</p></div>
+<div><h1 id="collision-detector">Collision Detector<a class="headerlink" href="#collision-detector" title="Permanent link">#</a></h1>
+<h2 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">#</a></h2>
+<p>This module subscribes required data (ego-pose, obstacles, etc), and publishes diagnostics if an object is within a specific distance.</p>
+<h2 id="inner-workings-algorithms">Inner-workings / Algorithms<a class="headerlink" href="#inner-workings-algorithms" title="Permanent link">#</a></h2>
+<h3 id="flow-chart">Flow chart<a class="headerlink" href="#flow-chart" title="Permanent link">#</a></h3>
+<h3 id="algorithms">Algorithms<a class="headerlink" href="#algorithms" title="Permanent link">#</a></h3>
+<h3 id="check-data">Check data<a class="headerlink" href="#check-data" title="Permanent link">#</a></h3>
+<p>Check that <code>collision_detector</code> receives no ground pointcloud, dynamic objects.</p>
+<h3 id="object-filtering">Object Filtering<a class="headerlink" href="#object-filtering" title="Permanent link">#</a></h3>
+<h4 id="recognition-assumptions">Recognition Assumptions<a class="headerlink" href="#recognition-assumptions" title="Permanent link">#</a></h4>
+<ol>
+<li>If the classification changes but it's considered the same object, the uuid does not change.</li>
+<li>It's possible for the same uuid to be recognized after being lost for a few frames.</li>
+<li>Once an object is determined to be excluded, it continues to be excluded for a certain period of time.</li>
+</ol>
+<h4 id="filtering-process">Filtering Process<a class="headerlink" href="#filtering-process" title="Permanent link">#</a></h4>
+<ol>
+<li>
+<p>Initial Recognition and Exclusion:</p>
+<ul>
+<li>The system checks if a newly recognized object's classification is listed in <code>nearby_object_type_filters</code>.</li>
+<li>If so, and the object is within the <code>nearby_filter_radius</code>, it is marked for exclusion.</li>
+</ul>
+</li>
+<li>
+<p>New Object Determination:</p>
+<ul>
+<li>An object is considered "new" based on its UUID.</li>
+<li>If the UUID is not found in recent frame data, the object is treated as new.</li>
+</ul>
+</li>
+<li>
+<p>Exclusion Mechanism:</p>
+<ul>
+<li>Newly excluded objects are recorded by their UUID.</li>
+<li>These objects continue to be excluded for a set period (<code>keep_ignoring_time</code>) as long as they maintain the classification specified in <code>nearby_object_type_filters</code> and remain within the <code>nearby_filter_radius</code>.</li>
+</ul>
+</li>
+</ol>
+<h3 id="get-distance-to-nearest-object">Get distance to nearest object<a class="headerlink" href="#get-distance-to-nearest-object" title="Permanent link">#</a></h3>
+<p>Calculate distance between ego vehicle and the nearest object.
+In this function, it calculates the minimum distance between the polygon of ego vehicle and all points in pointclouds and the polygons of dynamic objects.</p>
+<h2 id="inputs-outputs">Inputs / Outputs<a class="headerlink" href="#inputs-outputs" title="Permanent link">#</a></h2>
+<h3 id="input">Input<a class="headerlink" href="#input" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/perception/obstacle_segmentation/pointcloud</code></td>
+<td><code>sensor_msgs::msg::PointCloud2</code></td>
+<td>Pointcloud of obstacles which the ego-vehicle should stop or avoid</td>
+</tr>
+<tr>
+<td><code>/perception/object_recognition/objects</code></td>
+<td><code>autoware_perception_msgs::msg::PredictedObjects</code></td>
+<td>Dynamic objects</td>
+</tr>
+<tr>
+<td><code>/tf</code></td>
+<td><code>tf2_msgs::msg::TFMessage</code></td>
+<td>TF</td>
+</tr>
+<tr>
+<td><code>/tf_static</code></td>
+<td><code>tf2_msgs::msg::TFMessage</code></td>
+<td>TF static</td>
+</tr>
+</tbody>
+</table>
+<h3 id="output">Output<a class="headerlink" href="#output" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/diagnostics</code></td>
+<td><code>diagnostic_msgs::msg::DiagnosticArray</code></td>
+<td>Diagnostics</td>
+</tr>
+</tbody>
+</table>
+<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+<th align="left">Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>use_pointcloud</code></td>
+<td align="left"><code>bool</code></td>
+<td align="left">Use pointcloud as obstacle check</td>
+<td align="left"><code>true</code></td>
+</tr>
+<tr>
+<td align="left"><code>use_dynamic_object</code></td>
+<td align="left"><code>bool</code></td>
+<td align="left">Use dynamic object as obstacle check</td>
+<td align="left"><code>true</code></td>
+</tr>
+<tr>
+<td align="left"><code>collision_distance</code></td>
+<td align="left"><code>double</code></td>
+<td align="left">Distance threshold at which an object is considered a collision. [m]</td>
+<td align="left">0.15</td>
+</tr>
+<tr>
+<td align="left"><code>nearby_filter_radius</code></td>
+<td align="left"><code>double</code></td>
+<td align="left">Distance range for filtering objects. Objects within this radius are considered. [m]</td>
+<td align="left">5.0</td>
+</tr>
+<tr>
+<td align="left"><code>keep_ignoring_time</code></td>
+<td align="left"><code>double</code></td>
+<td align="left">Time to keep filtering objects that first appeared in the vicinity [sec]</td>
+<td align="left">10.0</td>
+</tr>
+<tr>
+<td align="left"><code>nearby_object_type_filters</code></td>
+<td align="left"><code>object of bool values</code></td>
+<td align="left">Specifies which object types to filter. Only objects with <code>true</code> value will be filtered.</td>
+<td align="left"><code>{unknown: true, others: false}</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="assumptions-known-limits">Assumptions / Known limits<a class="headerlink" href="#assumptions-known-limits" title="Permanent link">#</a></h2>
+<ul>
+<li>This module is based on <code>surround_obstacle_checker</code></li>
+</ul></div>
 
 
 
@@ -13223,7 +13520,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../bag_time_manager_rviz_plugin/" class="md-footer__link md-footer__link--prev" aria-label="Previous: bag_time_manager_rviz_plugin" rel="prev">
+          <a href="../autoware_autonomous_emergency_braking/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Autonomous Emergency Braking (AEB)" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -13232,20 +13529,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                bag_time_manager_rviz_plugin
+                Autonomous Emergency Braking (AEB)
               </div>
             </div>
           </a>
         
         
           
-          <a href="../component_interface_utils/" class="md-footer__link md-footer__link--next" aria-label="Next: component_interface_utils" rel="next">
+          <a href="../autoware_control_validator/" class="md-footer__link md-footer__link--next" aria-label="Next: Control Validator" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                component_interface_utils
+                Control Validator
               </div>
             </div>
             <div class="md-footer__button md-icon">
