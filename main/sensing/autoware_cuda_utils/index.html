@@ -8,20 +8,20 @@
       
       
       
-        <link rel="canonical" href="https://autowarefoundation.github.io/autoware.universe/main/common/component_interface_utils/">
+        <link rel="canonical" href="https://autowarefoundation.github.io/autoware.universe/main/sensing/autoware_cuda_utils/">
       
       
-        <link rel="prev" href="../bag_time_manager_rviz_plugin/">
+        <link rel="prev" href="../../perception/perception_utils/">
       
       
-        <link rel="next" href="../fake_test_node/design/fake_test_node-design/">
+        <link rel="next" href="../autoware_gnss_poser/">
       
       <link rel="icon" href="../../docs/assets/images/autoware-foundation.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.20">
     
     
       
-        <title>component_interface_utils - Autoware Universe Documentation</title>
+        <title>autoware_cuda_utils - Autoware Universe Documentation</title>
       
     
     
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#component_interface_utils" class="md-skip">
+        <a href="#autoware_cuda_utils" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              component_interface_utils
+              autoware_cuda_utils
             
           </span>
         </div>
@@ -208,15 +208,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link md-tabs__link--active">
+      <a href="../../common" class="md-tabs__link">
         Common
       </a>
     </li>
@@ -380,6 +378,8 @@
         
   
   
+    
+  
 
 
   
@@ -391,7 +391,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../sensing/autoware_gnss_poser/" class="md-tabs__link">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
         Sensing
       </a>
     </li>
@@ -548,16 +548,16 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
       
       
         
@@ -580,7 +580,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
           Common
@@ -593,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../../common" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -646,7 +646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autoware_testing/design/autoware_testing-design" class="md-nav__link">
+      <a href="../../common/autoware_testing/design/autoware_testing-design" class="md-nav__link">
         autoware_testing
       </a>
     </li>
@@ -660,7 +660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fake_test_node/design/fake_test_node-design" class="md-nav__link">
+      <a href="../../common/fake_test_node/design/fake_test_node-design" class="md-nav__link">
         fake_test_node
       </a>
     </li>
@@ -674,7 +674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autoware_test_utils" class="md-nav__link">
+      <a href="../../common/autoware_test_utils" class="md-nav__link">
         Test Utils
       </a>
     </li>
@@ -797,7 +797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autoware_auto_common/design/comparisons" class="md-nav__link">
+      <a href="../../common/autoware_auto_common/design/comparisons" class="md-nav__link">
         comparisons
       </a>
     </li>
@@ -818,7 +818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autoware_grid_map_utils" class="md-nav__link">
+      <a href="../../common/autoware_grid_map_utils" class="md-nav__link">
         autoware_grid_map_utils
       </a>
     </li>
@@ -832,7 +832,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autoware_point_types" class="md-nav__link">
+      <a href="../../common/autoware_point_types" class="md-nav__link">
         autoware_point_types
       </a>
     </li>
@@ -846,7 +846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../geography_utils" class="md-nav__link">
+      <a href="../../common/geography_utils" class="md-nav__link">
         Geography Utils
       </a>
     </li>
@@ -860,7 +860,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../global_parameter_loader/Readme" class="md-nav__link">
+      <a href="../../common/global_parameter_loader/Readme" class="md-nav__link">
         Global Parameter Loader
       </a>
     </li>
@@ -874,7 +874,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../glog_component" class="md-nav__link">
+      <a href="../../common/glog_component" class="md-nav__link">
         Glog Component
       </a>
     </li>
@@ -888,7 +888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../interpolation" class="md-nav__link">
+      <a href="../../common/interpolation" class="md-nav__link">
         interpolation
       </a>
     </li>
@@ -902,7 +902,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../kalman_filter" class="md-nav__link">
+      <a href="../../common/kalman_filter" class="md-nav__link">
         Kalman Filter
       </a>
     </li>
@@ -916,7 +916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autoware_motion_utils" class="md-nav__link">
+      <a href="../../common/autoware_motion_utils" class="md-nav__link">
         Motion Utils
       </a>
     </li>
@@ -930,7 +930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autoware_motion_utils/docs/vehicle/vehicle" class="md-nav__link">
+      <a href="../../common/autoware_motion_utils/docs/vehicle/vehicle" class="md-nav__link">
         Vehicle Utils
       </a>
     </li>
@@ -944,7 +944,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../object_recognition_utils" class="md-nav__link">
+      <a href="../../common/object_recognition_utils" class="md-nav__link">
         Object Recognition Utils
       </a>
     </li>
@@ -958,7 +958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../osqp_interface/design/osqp_interface-design" class="md-nav__link">
+      <a href="../../common/osqp_interface/design/osqp_interface-design" class="md-nav__link">
         OSQP Interface
       </a>
     </li>
@@ -972,7 +972,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../perception_utils" class="md-nav__link">
+      <a href="../../common/perception_utils" class="md-nav__link">
         Perception Utils
       </a>
     </li>
@@ -986,7 +986,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../qp_interface/design/qp_interface-design" class="md-nav__link">
+      <a href="../../common/qp_interface/design/qp_interface-design" class="md-nav__link">
         QP Interface
       </a>
     </li>
@@ -1035,7 +1035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../signal_processing" class="md-nav__link">
+      <a href="../../common/signal_processing" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -1049,7 +1049,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../signal_processing/documentation/ButterworthFilter" class="md-nav__link">
+      <a href="../../common/signal_processing/documentation/ButterworthFilter" class="md-nav__link">
         Butterworth Filter
       </a>
     </li>
@@ -1070,7 +1070,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autoware_universe_utils" class="md-nav__link">
+      <a href="../../common/autoware_universe_utils" class="md-nav__link">
         autoware_universe_utils
       </a>
     </li>
@@ -1084,7 +1084,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../traffic_light_utils" class="md-nav__link">
+      <a href="../../common/traffic_light_utils" class="md-nav__link">
         traffic_light_utils
       </a>
     </li>
@@ -1133,7 +1133,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tvm_utility" class="md-nav__link">
+      <a href="../../common/tvm_utility" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -1147,7 +1147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tvm_utility/tvm-utility-yolo-v2-tiny-tests" class="md-nav__link">
+      <a href="../../common/tvm_utility/tvm-utility-yolo-v2-tiny-tests" class="md-nav__link">
         YOLOv2 Tiny Example
       </a>
     </li>
@@ -1240,7 +1240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autoware_perception_rviz_plugin" class="md-nav__link">
+      <a href="../../common/autoware_perception_rviz_plugin" class="md-nav__link">
         autoware_perception_rviz_plugin
       </a>
     </li>
@@ -1254,7 +1254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autoware_overlay_rviz_plugin/autoware_overlay_rviz_plugin" class="md-nav__link">
+      <a href="../../common/autoware_overlay_rviz_plugin/autoware_overlay_rviz_plugin" class="md-nav__link">
         autoware_overlay_rviz_plugin
       </a>
     </li>
@@ -1268,7 +1268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autoware_overlay_rviz_plugin/autoware_mission_details_overlay_rviz_plugin" class="md-nav__link">
+      <a href="../../common/autoware_overlay_rviz_plugin/autoware_mission_details_overlay_rviz_plugin" class="md-nav__link">
         autoware_mission_details_overlay_rviz_plugin
       </a>
     </li>
@@ -1282,7 +1282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bag_time_manager_rviz_plugin" class="md-nav__link">
+      <a href="../../common/bag_time_manager_rviz_plugin" class="md-nav__link">
         bag_time_manager_rviz_plugin
       </a>
     </li>
@@ -1296,7 +1296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../polar_grid/Readme" class="md-nav__link">
+      <a href="../../common/polar_grid/Readme" class="md-nav__link">
         polar_grid
       </a>
     </li>
@@ -1310,7 +1310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tier4_adapi_rviz_plugin" class="md-nav__link">
+      <a href="../../common/tier4_adapi_rviz_plugin" class="md-nav__link">
         tier4_adapi_rviz_plugin
       </a>
     </li>
@@ -1324,7 +1324,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tier4_api_utils" class="md-nav__link">
+      <a href="../../common/tier4_api_utils" class="md-nav__link">
         tier4_api_utils
       </a>
     </li>
@@ -1338,7 +1338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tier4_camera_view_rviz_plugin" class="md-nav__link">
+      <a href="../../common/tier4_camera_view_rviz_plugin" class="md-nav__link">
         tier4_camera_view_rviz_plugin
       </a>
     </li>
@@ -1352,7 +1352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tier4_datetime_rviz_plugin" class="md-nav__link">
+      <a href="../../common/tier4_datetime_rviz_plugin" class="md-nav__link">
         tier4_datetime_rviz_plugin
       </a>
     </li>
@@ -1366,7 +1366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tier4_localization_rviz_plugin" class="md-nav__link">
+      <a href="../../common/tier4_localization_rviz_plugin" class="md-nav__link">
         tier4_localization_rviz_plugin
       </a>
     </li>
@@ -1380,7 +1380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tier4_planning_rviz_plugin" class="md-nav__link">
+      <a href="../../common/tier4_planning_rviz_plugin" class="md-nav__link">
         tier4_planning_rviz_plugin
       </a>
     </li>
@@ -1394,7 +1394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tier4_state_rviz_plugin" class="md-nav__link">
+      <a href="../../common/tier4_state_rviz_plugin" class="md-nav__link">
         tier4_state_rviz_plugin
       </a>
     </li>
@@ -1408,7 +1408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tier4_system_rviz_plugin" class="md-nav__link">
+      <a href="../../common/tier4_system_rviz_plugin" class="md-nav__link">
         tier4_system_rviz_plugin
       </a>
     </li>
@@ -1422,7 +1422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tier4_traffic_light_rviz_plugin" class="md-nav__link">
+      <a href="../../common/tier4_traffic_light_rviz_plugin" class="md-nav__link">
         tier4_traffic_light_rviz_plugin
       </a>
     </li>
@@ -1436,7 +1436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tier4_vehicle_rviz_plugin" class="md-nav__link">
+      <a href="../../common/tier4_vehicle_rviz_plugin" class="md-nav__link">
         tier4_vehicle_rviz_plugin
       </a>
     </li>
@@ -1450,7 +1450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../traffic_light_recognition_marker_publisher/Readme" class="md-nav__link">
+      <a href="../../common/traffic_light_recognition_marker_publisher/Readme" class="md-nav__link">
         traffic_light_recognition_marker_publisher
       </a>
     </li>
@@ -1508,7 +1508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../goal_distance_calculator/Readme" class="md-nav__link">
+      <a href="../../common/goal_distance_calculator/Readme" class="md-nav__link">
         Goal Distance Calculator
       </a>
     </li>
@@ -1522,7 +1522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autoware_path_distance_calculator/Readme" class="md-nav__link">
+      <a href="../../common/autoware_path_distance_calculator/Readme" class="md-nav__link">
         Path Distance Calculator
       </a>
     </li>
@@ -1584,8 +1584,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../autoware_ad_api_specs" class="md-nav__link">
-        autoware_ad_api_specs
+      <a href="../../common/autoware_adapi_specs" class="md-nav__link">
+        autoware_adapi_specs
       </a>
     </li>
   
@@ -1598,7 +1598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../component_interface_specs" class="md-nav__link">
+      <a href="../../common/component_interface_specs" class="md-nav__link">
         component_interface_specs
       </a>
     </li>
@@ -1612,7 +1612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../component_interface_tools" class="md-nav__link">
+      <a href="../../common/component_interface_tools" class="md-nav__link">
         component_interface_tools
       </a>
     </li>
@@ -1626,7 +1626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="." class="md-nav__link">
+      <a href="../../common/component_interface_utils" class="md-nav__link">
         component_interface_utils
       </a>
     </li>
@@ -4068,12 +4068,18 @@
             
           
         
+          
+        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../localization/autoware_ndt_scan_matcher/">Autoware ndt scan matcher</a>
+          
+            <label for="__nav_5_7">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
           
         </div>
       
@@ -4084,6 +4090,172 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_7_2" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_7_2" id="__nav_5_7_2_label" tabindex="0">
+          Include
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_7_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          Include
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_7_2_1" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_7_2_1" id="__nav_5_7_2_1_label" tabindex="0">
+          Autoware
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_7_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_7_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Autoware
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_7_2_1_1" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_7_2_1_1" id="__nav_5_7_2_1_1_label" tabindex="0">
+          Ndt scan matcher
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_5_7_2_1_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_7_2_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Ndt scan matcher
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_7_2_1_1_1" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../localization/autoware_ndt_scan_matcher/include/autoware/ndt_scan_matcher/ndt_omp/">Ndt omp</a>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_5_7_2_1_1_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_7_2_1_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Ndt omp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
             
           
         </ul>
@@ -9530,16 +9702,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-        
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
       
       
         
@@ -9576,7 +9748,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           Sensing
@@ -9587,18 +9759,18 @@
               
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
       
       
-        
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_1" checked>
       
       
         
@@ -9610,15 +9782,15 @@
       
         
         
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../../sensing/autoware_gnss_poser/">Autoware gnss poser</a>
+        <div class="md-nav__link md-nav__link--index md-nav__link--active">
+          <a href="./">Autoware cuda utils</a>
           
         </div>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_1_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_1_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_9_1">
           <span class="md-nav__icon md-icon"></span>
-          Autoware gnss poser
+          Autoware cuda utils
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -9659,14 +9831,14 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../sensing/autoware_image_diagnostics/">Autoware image diagnostics</a>
+          <a href="../autoware_gnss_poser/">Autoware gnss poser</a>
           
         </div>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_9_2">
           <span class="md-nav__icon md-icon"></span>
-          Autoware image diagnostics
+          Autoware gnss poser
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -9707,14 +9879,14 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../sensing/autoware_image_transport_decompressor/">Autoware image transport decompressor</a>
+          <a href="../autoware_image_diagnostics/">Autoware image diagnostics</a>
           
         </div>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_9_3">
           <span class="md-nav__icon md-icon"></span>
-          Autoware image transport decompressor
+          Autoware image diagnostics
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -9755,14 +9927,14 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../sensing/autoware_imu_corrector/">Autoware imu corrector</a>
+          <a href="../autoware_image_transport_decompressor/">Autoware image transport decompressor</a>
           
         </div>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_9_4">
           <span class="md-nav__icon md-icon"></span>
-          Autoware imu corrector
+          Autoware image transport decompressor
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -9803,14 +9975,14 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../sensing/autoware_pcl_extensions/">Autoware pcl extensions</a>
+          <a href="../autoware_imu_corrector/">Autoware imu corrector</a>
           
         </div>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_9_5">
           <span class="md-nav__icon md-icon"></span>
-          Autoware pcl extensions
+          Autoware imu corrector
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -9846,290 +10018,22 @@
             
           
         
-          
-        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../sensing/autoware_pointcloud_preprocessor/">Autoware pointcloud preprocessor</a>
-          
-            <label for="__nav_9_6">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
+          <a href="../autoware_pcl_extensions/">Autoware pcl extensions</a>
           
         </div>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_6_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_9_6">
           <span class="md-nav__icon md-icon"></span>
-          Autoware pointcloud preprocessor
+          Autoware pcl extensions
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-        
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9_6_2" >
-      
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_9_6_2" id="__nav_9_6_2_label" tabindex="0">
-          Docs
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_6_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_9_6_2">
-          <span class="md-nav__icon md-icon"></span>
-          Docs
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../sensing/autoware_pointcloud_preprocessor/docs/blockage_diag/" class="md-nav__link">
-        blockage_diag
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../sensing/autoware_pointcloud_preprocessor/docs/concatenate-data/" class="md-nav__link">
-        concatenate_data
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../sensing/autoware_pointcloud_preprocessor/docs/crop-box-filter/" class="md-nav__link">
-        crop_box_filter
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../sensing/autoware_pointcloud_preprocessor/docs/distortion-corrector/" class="md-nav__link">
-        distortion_corrector
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../sensing/autoware_pointcloud_preprocessor/docs/downsample-filter/" class="md-nav__link">
-        downsample_filter
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../sensing/autoware_pointcloud_preprocessor/docs/dual-return-outlier-filter/" class="md-nav__link">
-        dual_return_outlier_filter
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../sensing/autoware_pointcloud_preprocessor/docs/outlier-filter/" class="md-nav__link">
-        outlier_filter
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../sensing/autoware_pointcloud_preprocessor/docs/passthrough-filter/" class="md-nav__link">
-        passthrough_filter
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../sensing/autoware_pointcloud_preprocessor/docs/pointcloud-accumulator/" class="md-nav__link">
-        pointcloud_accumulator
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../sensing/autoware_pointcloud_preprocessor/docs/radius-search-2d-outlier-filter/" class="md-nav__link">
-        radius_search_2d_outlier_filter
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../sensing/autoware_pointcloud_preprocessor/docs/ring-outlier-filter/" class="md-nav__link">
-        ring_outlier_filter
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../sensing/autoware_pointcloud_preprocessor/docs/vector-map-filter/" class="md-nav__link">
-        vector_map_filter
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../sensing/autoware_pointcloud_preprocessor/docs/vector-map-inside-area-filter/" class="md-nav__link">
-        vector_map_inside_area_filter
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../sensing/autoware_pointcloud_preprocessor/docs/voxel-grid-outlier-filter/" class="md-nav__link">
-        voxel_grid_outlier_filter
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
             
           
         </ul>
@@ -10162,22 +10066,290 @@
             
           
         
+          
+        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../sensing/autoware_radar_scan_to_pointcloud2/">Autoware radar scan to pointcloud2</a>
+          <a href="../autoware_pointcloud_preprocessor/">Autoware pointcloud preprocessor</a>
+          
+            <label for="__nav_9_7">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
           
         </div>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_7_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_9_7">
           <span class="md-nav__icon md-icon"></span>
-          Autoware radar scan to pointcloud2
+          Autoware pointcloud preprocessor
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9_7_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_9_7_2" id="__nav_9_7_2_label" tabindex="0">
+          Docs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_7_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          Docs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../autoware_pointcloud_preprocessor/docs/blockage_diag/" class="md-nav__link">
+        blockage_diag
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../autoware_pointcloud_preprocessor/docs/concatenate-data/" class="md-nav__link">
+        concatenate_data
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../autoware_pointcloud_preprocessor/docs/crop-box-filter/" class="md-nav__link">
+        crop_box_filter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../autoware_pointcloud_preprocessor/docs/distortion-corrector/" class="md-nav__link">
+        distortion_corrector
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../autoware_pointcloud_preprocessor/docs/downsample-filter/" class="md-nav__link">
+        downsample_filter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../autoware_pointcloud_preprocessor/docs/dual-return-outlier-filter/" class="md-nav__link">
+        dual_return_outlier_filter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../autoware_pointcloud_preprocessor/docs/outlier-filter/" class="md-nav__link">
+        outlier_filter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../autoware_pointcloud_preprocessor/docs/passthrough-filter/" class="md-nav__link">
+        passthrough_filter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../autoware_pointcloud_preprocessor/docs/pointcloud-accumulator/" class="md-nav__link">
+        pointcloud_accumulator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../autoware_pointcloud_preprocessor/docs/radius-search-2d-outlier-filter/" class="md-nav__link">
+        radius_search_2d_outlier_filter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../autoware_pointcloud_preprocessor/docs/ring-outlier-filter/" class="md-nav__link">
+        ring_outlier_filter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../autoware_pointcloud_preprocessor/docs/vector-map-filter/" class="md-nav__link">
+        vector_map_filter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../autoware_pointcloud_preprocessor/docs/vector-map-inside-area-filter/" class="md-nav__link">
+        vector_map_inside_area_filter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../autoware_pointcloud_preprocessor/docs/voxel-grid-outlier-filter/" class="md-nav__link">
+        voxel_grid_outlier_filter
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
             
           
         </ul>
@@ -10215,14 +10387,14 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../sensing/autoware_radar_static_pointcloud_filter/">Autoware radar static pointcloud filter</a>
+          <a href="../autoware_radar_scan_to_pointcloud2/">Autoware radar scan to pointcloud2</a>
           
         </div>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_8_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_9_8">
           <span class="md-nav__icon md-icon"></span>
-          Autoware radar static pointcloud filter
+          Autoware radar scan to pointcloud2
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -10263,14 +10435,14 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../sensing/autoware_radar_threshold_filter/">Autoware radar threshold filter</a>
+          <a href="../autoware_radar_static_pointcloud_filter/">Autoware radar static pointcloud filter</a>
           
         </div>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_9_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_9_9">
           <span class="md-nav__icon md-icon"></span>
-          Autoware radar threshold filter
+          Autoware radar static pointcloud filter
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -10311,14 +10483,14 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../sensing/autoware_radar_tracks_noise_filter/">Autoware radar tracks noise filter</a>
+          <a href="../autoware_radar_threshold_filter/">Autoware radar threshold filter</a>
           
         </div>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_10_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_9_10">
           <span class="md-nav__icon md-icon"></span>
-          Autoware radar tracks noise filter
+          Autoware radar threshold filter
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -10359,14 +10531,14 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../sensing/cuda_utils/">Cuda utils</a>
+          <a href="../autoware_radar_tracks_noise_filter/">Autoware radar tracks noise filter</a>
           
         </div>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_11_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_9_11">
           <span class="md-nav__icon md-icon"></span>
-          Cuda utils
+          Autoware radar tracks noise filter
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -10440,7 +10612,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../sensing/livox/autoware_livox_tag_filter/">Autoware livox tag filter</a>
+          <a href="../livox/autoware_livox_tag_filter/">Autoware livox tag filter</a>
           
         </div>
       
@@ -10495,7 +10667,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../sensing/vehicle_velocity_converter/">Vehicle velocity converter</a>
+          <a href="../vehicle_velocity_converter/">Vehicle velocity converter</a>
           
         </div>
       
@@ -13236,43 +13408,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#features" class="md-nav__link">
-    Features
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#design" class="md-nav__link">
-    Design
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#instantiation-of-the-wrapper-class" class="md-nav__link">
-    Instantiation of the wrapper class
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#logging-for-service-and-client" class="md-nav__link">
-    Logging for service and client
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#service-exception-for-response" class="md-nav__link">
-    Service exception for response
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#relays-for-topic-and-service" class="md-nav__link">
-    Relays for topic and service
+  <a href="#purpose" class="md-nav__link">
+    Purpose
   </a>
   
 </li>
@@ -13295,84 +13432,9 @@
   
 
 
-<div><h1 id="component_interface_utils">component_interface_utils<a class="headerlink" href="#component_interface_utils" title="Permanent link">#</a></h1>
-<h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">#</a></h2>
-<p>This is a utility package that provides the following features:</p>
-<ul>
-<li>Instantiation of the wrapper class</li>
-<li>Logging for service and client</li>
-<li>Service exception for response</li>
-<li>Relays for topic and service</li>
-</ul>
-<h2 id="design">Design<a class="headerlink" href="#design" title="Permanent link">#</a></h2>
-<p>This package provides the wrappers for the interface classes of rclcpp.
-The wrappers limit the usage of the original class to enforce the processing recommended by the component interface.
-Do not inherit the class of rclcpp, and forward or wrap the member function that is allowed to be used.</p>
-<h2 id="instantiation-of-the-wrapper-class">Instantiation of the wrapper class<a class="headerlink" href="#instantiation-of-the-wrapper-class" title="Permanent link">#</a></h2>
-<p>The wrapper class requires interface information in this format.</p>
-<div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">SampleService</span>
-<span class="p">{</span>
-<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">Service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sample_msgs</span><span class="o">::</span><span class="n">srv</span><span class="o">::</span><span class="n">ServiceType</span><span class="p">;</span>
-<span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">name</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"/sample/service"</span><span class="p">;</span>
-<span class="p">};</span>
-
-<span class="k">struct</span><span class="w"> </span><span class="nc">SampleMessage</span>
-<span class="p">{</span>
-<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">Message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sample_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">MessageType</span><span class="p">;</span>
-<span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">name</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"/sample/message"</span><span class="p">;</span>
-<span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">depth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">reliability</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RMW_QOS_POLICY_RELIABILITY_RELIABLE</span><span class="p">;</span>
-<span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">durability</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RMW_QOS_POLICY_DURABILITY_TRANSIENT_LOCAL</span><span class="p">;</span>
-<span class="p">};</span>
-</code></pre></div>
-<p>Create the wrapper using the above definition as follows.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// header file</span>
-<span class="n">component_interface_utils</span><span class="o">::</span><span class="n">Service</span><span class="o">&lt;</span><span class="n">SampleService</span><span class="o">&gt;::</span><span class="n">SharedPtr</span><span class="w"> </span><span class="n">srv_</span><span class="p">;</span>
-<span class="n">component_interface_utils</span><span class="o">::</span><span class="n">Client</span><span class="o">&lt;</span><span class="n">SampleService</span><span class="o">&gt;::</span><span class="n">SharedPtr</span><span class="w"> </span><span class="n">cli_</span><span class="p">;</span>
-<span class="n">component_interface_utils</span><span class="o">::</span><span class="n">Publisher</span><span class="o">&lt;</span><span class="n">SampleMessage</span><span class="o">&gt;::</span><span class="n">SharedPtr</span><span class="w"> </span><span class="n">pub_</span><span class="p">;</span>
-<span class="n">component_interface_utils</span><span class="o">::</span><span class="n">Subscription</span><span class="o">&lt;</span><span class="n">SampleMessage</span><span class="o">&gt;::</span><span class="n">SharedPtr</span><span class="w"> </span><span class="n">sub_</span><span class="p">;</span>
-
-<span class="c1">// source file</span>
-<span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">component_interface_utils</span><span class="o">::</span><span class="n">NodeAdaptor</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
-<span class="n">node</span><span class="p">.</span><span class="n">init_srv</span><span class="p">(</span><span class="n">srv_</span><span class="p">,</span><span class="w"> </span><span class="n">callback</span><span class="p">);</span>
-<span class="n">node</span><span class="p">.</span><span class="n">init_cli</span><span class="p">(</span><span class="n">cli_</span><span class="p">);</span>
-<span class="n">node</span><span class="p">.</span><span class="n">init_pub</span><span class="p">(</span><span class="n">pub_</span><span class="p">);</span>
-<span class="n">node</span><span class="p">.</span><span class="n">init_sub</span><span class="p">(</span><span class="n">sub_</span><span class="p">,</span><span class="w"> </span><span class="n">callback</span><span class="p">);</span>
-</code></pre></div>
-<h2 id="logging-for-service-and-client">Logging for service and client<a class="headerlink" href="#logging-for-service-and-client" title="Permanent link">#</a></h2>
-<p>If the wrapper class is used, logging is automatically enabled. The log level is <code>RCLCPP_INFO</code>.</p>
-<h2 id="service-exception-for-response">Service exception for response<a class="headerlink" href="#service-exception-for-response" title="Permanent link">#</a></h2>
-<p>If the wrapper class is used and the service response has status, throwing <code>ServiceException</code> will automatically catch and set it to status.
-This is useful when returning an error from a function called from the service callback.</p>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">service_callback</span><span class="p">(</span><span class="n">Request</span><span class="w"> </span><span class="n">req</span><span class="p">,</span><span class="w"> </span><span class="n">Response</span><span class="w"> </span><span class="n">res</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">   </span><span class="n">function</span><span class="p">();</span>
-<span class="w">   </span><span class="n">res</span><span class="o">-&gt;</span><span class="n">status</span><span class="p">.</span><span class="n">success</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">function</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">   </span><span class="k">throw</span><span class="w"> </span><span class="n">ServiceException</span><span class="p">(</span><span class="n">ERROR_CODE</span><span class="p">,</span><span class="w"> </span><span class="s">"message"</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>If the wrapper class is not used or the service response has no status, manually catch the <code>ServiceException</code> as follows.</p>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">service_callback</span><span class="p">(</span><span class="n">Request</span><span class="w"> </span><span class="n">req</span><span class="p">,</span><span class="w"> </span><span class="n">Response</span><span class="w"> </span><span class="n">res</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">   </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="n">function</span><span class="p">();</span>
-<span class="w">      </span><span class="n">res</span><span class="o">-&gt;</span><span class="n">status</span><span class="p">.</span><span class="n">success</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
-<span class="w">   </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">ServiceException</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="n">res</span><span class="o">-&gt;</span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">error</span><span class="p">.</span><span class="n">status</span><span class="p">();</span>
-<span class="w">   </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<h2 id="relays-for-topic-and-service">Relays for topic and service<a class="headerlink" href="#relays-for-topic-and-service" title="Permanent link">#</a></h2>
-<p>There are utilities for relaying services and messages of the same type.</p>
-<div class="highlight"><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">component_interface_utils</span><span class="o">::</span><span class="n">NodeAdaptor</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
-<span class="n">service_callback_group_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">create_callback_group</span><span class="p">(</span><span class="n">rclcpp</span><span class="o">::</span><span class="n">CallbackGroupType</span><span class="o">::</span><span class="n">MutuallyExclusive</span><span class="p">);</span>
-<span class="n">node</span><span class="p">.</span><span class="n">relay_message</span><span class="p">(</span><span class="n">pub_</span><span class="p">,</span><span class="w"> </span><span class="n">sub_</span><span class="p">);</span>
-<span class="n">node</span><span class="p">.</span><span class="n">relay_service</span><span class="p">(</span><span class="n">cli_</span><span class="p">,</span><span class="w"> </span><span class="n">srv_</span><span class="p">,</span><span class="w"> </span><span class="n">service_callback_group_</span><span class="p">);</span><span class="w">  </span><span class="c1">// group is for avoiding deadlocks</span>
-</code></pre></div></div>
+<div><h1 id="autoware_cuda_utils">autoware_cuda_utils<a class="headerlink" href="#autoware_cuda_utils" title="Permanent link">#</a></h1>
+<h2 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">#</a></h2>
+<p>This package contains a library of common functions related to CUDA.</p></div>
 
 
 
@@ -13399,7 +13461,7 @@ This is useful when returning an error from a function called from the service c
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../bag_time_manager_rviz_plugin/" class="md-footer__link md-footer__link--prev" aria-label="Previous: bag_time_manager_rviz_plugin" rel="prev">
+          <a href="../../perception/perception_utils/" class="md-footer__link md-footer__link--prev" aria-label="Previous: perception_utils" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -13408,20 +13470,20 @@ This is useful when returning an error from a function called from the service c
                 Previous
               </span>
               <div class="md-ellipsis">
-                bag_time_manager_rviz_plugin
+                perception_utils
               </div>
             </div>
           </a>
         
         
           
-          <a href="../fake_test_node/design/fake_test_node-design/" class="md-footer__link md-footer__link--next" aria-label="Next: Fake Test Node" rel="next">
+          <a href="../autoware_gnss_poser/" class="md-footer__link md-footer__link--next" aria-label="Next: gnss_poser" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Fake Test Node
+                gnss_poser
               </div>
             </div>
             <div class="md-footer__button md-icon">
