@@ -251,21 +251,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://autowarefoundation.github.io/autoware.universe/main/common/tvm_utility/</loc>
-         <lastmod>2024-11-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://autowarefoundation.github.io/autoware.universe/main/common/tvm_utility/tvm-utility-yolo-v2-tiny-tests/</loc>
-         <lastmod>2024-11-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://autowarefoundation.github.io/autoware.universe/main/common/tvm_utility/artifacts/</loc>
-         <lastmod>2024-11-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://autowarefoundation.github.io/autoware.universe/main/control/autoware_autonomous_emergency_braking/</loc>
          <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
@@ -371,17 +356,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://autowarefoundation.github.io/autoware.universe/main/evaluator/autoware_evaluator_utils/</loc>
-         <lastmod>2024-11-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://autowarefoundation.github.io/autoware.universe/main/evaluator/autoware_planning_evaluator/</loc>
-         <lastmod>2024-11-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://autowarefoundation.github.io/autoware.universe/main/evaluator/diagnostic_converter/</loc>
          <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -397,6 +372,11 @@
     </url>
     <url>
          <loc>https://autowarefoundation.github.io/autoware.universe/main/evaluator/perception_online_evaluator/</loc>
+         <lastmod>2024-11-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://autowarefoundation.github.io/autoware.universe/main/evaluator/scenario_simulator_v2_adapter/</loc>
          <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
