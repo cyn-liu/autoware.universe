@@ -14,7 +14,7 @@
         <link rel="prev" href="../learning_based_vehicle_model/">
       
       
-        <link rel="next" href="../tier4_dummy_object_rviz_plugin/">
+        <link rel="next" href="docs/actuation_cmd_sim/">
       
       <link rel="icon" href="../../docs/assets/images/autoware-foundation.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.20">
@@ -1362,8 +1362,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../common/traffic_light_recognition_marker_publisher/Readme" class="md-nav__link">
-        traffic_light_recognition_marker_publisher
+      <a href="../../common/autoware_traffic_light_recognition_marker_publisher/Readme" class="md-nav__link">
+        autoware_traffic_light_recognition_marker_publisher
       </a>
     </li>
   
@@ -10867,12 +10867,18 @@
             
           
         
+          
+        
       
       
         
         
         <div class="md-nav__link md-nav__link--index md-nav__link--active">
           <a href="./">Simple planning simulator</a>
+          
+            <label for="__nav_10_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
           
         </div>
       
@@ -10883,6 +10889,60 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10_5_2" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_10_5_2" id="__nav_10_5_2_label" tabindex="0">
+          Docs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_5_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_10_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Docs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="docs/actuation_cmd_sim/" class="md-nav__link">
+        ACTUATION_CMD model
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
             
           
         </ul>
@@ -13573,7 +13633,13 @@
 <li><code>DELAY_STEER_ACC_GEARED_WO_FALL_GUARD</code></li>
 <li><code>DELAY_STEER_MAP_ACC_GEARED</code>: applies 1D dynamics and time delay to the steering and acceleration commands. The simulated acceleration is determined by a value converted through the provided acceleration map. This model is valuable for an accurate simulation with acceleration deviations in a real vehicle.</li>
 <li><code>LEARNED_STEER_VEL</code>: launches learned python models. More about this <a href="../learning_based_vehicle_model">here</a>.</li>
-<li><code>ACTUATION_CMD</code>: A simulator model that receives <code>ACTUATION_CMD</code>. In this case, the <code>raw_vehicle_cmd_converter</code> is also launched.</li>
+</ul>
+<p>The following models receive <code>ACTUATION_CMD</code> generated from <code>raw_vehicle_cmd_converter</code>. Therefore, when these models are selected, the <code>raw_vehicle_cmd_converter</code> is also launched.</p>
+<ul>
+<li><code>ACTUATION_CMD</code>: This model only converts accel/brake commands and use steer command as it is.</li>
+<li><code>ACTUATION_CMD_STEER_MAP</code>: The steer command is converted to the steer rate command using the steer map.</li>
+<li><code>ACTUATION_CMD_VGR</code>: The steer command is converted to the steer rate command using the variable gear ratio.</li>
+<li><code>ACTUATION_CMD_MECHANICAL</code>: This model has mechanical dynamics and controller for that.</li>
 </ul>
 <p>The <code>IDEAL</code> model moves ideally as commanded, while the <code>DELAY</code> model moves based on a 1st-order with time delay model. The <code>STEER</code> means the model receives the steer command. The <code>VEL</code> means the model receives the target velocity command, while the <code>ACC</code> model receives the target acceleration command. The <code>GEARED</code> suffix means that the motion will consider the gear command: the vehicle moves only one direction following the gear.</p>
 <p>The table below shows which models correspond to what parameters. The model names are written in abbreviated form (e.g. IDEAL_STEER_VEL = I_ST_V).</p>
@@ -13592,6 +13658,7 @@
 <th align="left">D_ST_A_G_WO_FG</th>
 <th align="left">D_ST_M_ACC_G</th>
 <th align="left">L_S_V</th>
+<th align="left">A_C</th>
 <th align="left">Default value</th>
 <th align="left">unit</th>
 </tr>
@@ -13610,6 +13677,7 @@
 <td align="left">o</td>
 <td align="left">o</td>
 <td align="left">x</td>
+<td align="left">x</td>
 <td align="left">0.1</td>
 <td align="left">[s]</td>
 </tr>
@@ -13626,6 +13694,7 @@
 <td align="left">o</td>
 <td align="left">o</td>
 <td align="left">x</td>
+<td align="left">o</td>
 <td align="left">0.24</td>
 <td align="left">[s]</td>
 </tr>
@@ -13637,6 +13706,7 @@
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left">o</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
@@ -13658,6 +13728,7 @@
 <td align="left">o</td>
 <td align="left">o</td>
 <td align="left">x</td>
+<td align="left">x</td>
 <td align="left">0.1</td>
 <td align="left">[s]</td>
 </tr>
@@ -13674,6 +13745,7 @@
 <td align="left">o</td>
 <td align="left">o</td>
 <td align="left">x</td>
+<td align="left">o</td>
 <td align="left">0.27</td>
 <td align="left">[s]</td>
 </tr>
@@ -13690,6 +13762,7 @@
 <td align="left">o</td>
 <td align="left">x</td>
 <td align="left">x</td>
+<td align="left">o</td>
 <td align="left">0.0</td>
 <td align="left">[rad]</td>
 </tr>
@@ -13701,6 +13774,7 @@
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left">o</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
@@ -13722,6 +13796,7 @@
 <td align="left">o</td>
 <td align="left">o</td>
 <td align="left">x</td>
+<td align="left">x</td>
 <td align="left">50.0</td>
 <td align="left">[m/s]</td>
 </tr>
@@ -13737,6 +13812,7 @@
 <td align="left">o</td>
 <td align="left">o</td>
 <td align="left">o</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">7.0</td>
 <td align="left">[m/ss]</td>
@@ -13754,6 +13830,7 @@
 <td align="left">o</td>
 <td align="left">o</td>
 <td align="left">x</td>
+<td align="left">o</td>
 <td align="left">1.0</td>
 <td align="left">[rad]</td>
 </tr>
@@ -13770,6 +13847,7 @@
 <td align="left">o</td>
 <td align="left">o</td>
 <td align="left">x</td>
+<td align="left">o</td>
 <td align="left">5.0</td>
 <td align="left">[rad/s]</td>
 </tr>
@@ -13786,6 +13864,7 @@
 <td align="left">o</td>
 <td align="left">o</td>
 <td align="left">x</td>
+<td align="left">o</td>
 <td align="left">0.0</td>
 <td align="left">[rad]</td>
 </tr>
@@ -13800,6 +13879,7 @@
 <td align="left">o</td>
 <td align="left">o</td>
 <td align="left">o</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left">1.0</td>
@@ -13818,6 +13898,7 @@
 <td align="left">o</td>
 <td align="left">x</td>
 <td align="left">x</td>
+<td align="left">x</td>
 <td align="left">1.0</td>
 <td align="left">[-]</td>
 </tr>
@@ -13833,6 +13914,7 @@
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left">o</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">-</td>
 <td align="left">[-]</td>
@@ -13850,6 +13932,7 @@
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left">o</td>
+<td align="left">x</td>
 <td align="left">-</td>
 <td align="left">[-]</td>
 </tr>
@@ -13866,6 +13949,7 @@
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left">o</td>
+<td align="left">x</td>
 <td align="left">-</td>
 <td align="left">[-]</td>
 </tr>
@@ -13882,6 +13966,7 @@
 <td align="left">x</td>
 <td align="left">x</td>
 <td align="left">o</td>
+<td align="left">x</td>
 <td align="left">-</td>
 <td align="left">[-]</td>
 </tr>
@@ -13913,96 +13998,8 @@
 </code></pre></div>
 <p><img alt="acceleration_map" src="media/acceleration_map.svg"></p>
 <h5 id="actuation_cmd-model">ACTUATION_CMD model<a class="headerlink" href="#actuation_cmd-model" title="Permanent link">#</a></h5>
-<p>The simple_planning_simulator usually operates by receiving Control commands, but when the <code>ACTUATION_CMD</code> model is selected, it receives Actuation commands instead of Control commands. This model can simulate the motion using the vehicle command that is actually sent to the real vehicle. Therefore, when this model is selected, the <code>raw_vehicle_cmd_converter</code> is also launched.</p>
-<p><code>convert_steer_cmd_method</code> has two options: "vgr" and "steer_map". If you choose "vgr" (variable gear ratio), it is assumed that the steering wheel angle is sent as the actuation command, and the value is converted to the steering tire angle to move the model. If you choose "steer_map", it is assumed that an arbitrary value is sent as the actuation command, and the value is converted to the steering tire rate to move the model. An arbitrary value is like EPS (Electric Power Steering) Voltage . <code>enable_pub_steer</code> determines whether to publish the steering tire angle. If false, it is expected to be converted and published from actuation_status in other nodes (e.g. raw_vehicle_cmd_converter).</p>
-<p><img alt="vgr_sim" src="media/vgr_sim.drawio.svg"></p>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-<p>The parameters used in the ACTUATION_CMD are as follows.</p>
-<table>
-<thead>
-<tr>
-<th align="left">Name</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-<th align="left">unit</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">accel_time_delay</td>
-<td align="left">double</td>
-<td align="left">dead time for the acceleration input</td>
-<td align="left">[s]</td>
-</tr>
-<tr>
-<td align="left">accel_time_constant</td>
-<td align="left">double</td>
-<td align="left">time constant of the 1st-order acceleration dynamics</td>
-<td align="left">[s]</td>
-</tr>
-<tr>
-<td align="left">brake_time_delay</td>
-<td align="left">double</td>
-<td align="left">dead time for the brake input</td>
-<td align="left">[s]</td>
-</tr>
-<tr>
-<td align="left">brake_time_constant</td>
-<td align="left">double</td>
-<td align="left">time constant of the 1st-order brake dynamics</td>
-<td align="left">[s]</td>
-</tr>
-<tr>
-<td align="left">convert_accel_cmd</td>
-<td align="left">bool</td>
-<td align="left">If true, it is assumed that the command is received converted to an accel actuation value, and it is converted back to acceleration value inside the simulator.</td>
-<td align="left">[-]</td>
-</tr>
-<tr>
-<td align="left">convert_brake_cmd</td>
-<td align="left">bool</td>
-<td align="left">If true, it is assumed that the command is received converted to a brake actuation value, and it is converted back to acceleration value inside the simulator.</td>
-<td align="left">[-]</td>
-</tr>
-<tr>
-<td align="left">convert_steer_cmd</td>
-<td align="left">bool</td>
-<td align="left">If true, it is assumed that the command is received converted to a steer actuation value, and it is converted back to steer rate value inside the simulator.</td>
-<td align="left">[-]</td>
-</tr>
-<tr>
-<td align="left">convert_steer_cmd_method</td>
-<td align="left">bool</td>
-<td align="left">method to convert steer command. You can choose from "vgr" and "steer_map".</td>
-<td align="left">[-]</td>
-</tr>
-<tr>
-<td align="left">vgr_coef_a</td>
-<td align="left">double</td>
-<td align="left">the value of the coefficient a of the variable gear ratio</td>
-<td align="left">[-]</td>
-</tr>
-<tr>
-<td align="left">vgr_coef_b</td>
-<td align="left">double</td>
-<td align="left">the value of the coefficient b of the variable gear ratio</td>
-<td align="left">[-]</td>
-</tr>
-<tr>
-<td align="left">vgr_coef_c</td>
-<td align="left">double</td>
-<td align="left">the value of the coefficient c of the variable gear ratio</td>
-<td align="left">[-]</td>
-</tr>
-<tr>
-<td align="left">enable_pub_steer</td>
-<td align="left">bool</td>
-<td align="left">whether to publish the steering tire angle. if false, it is expected to be converted and published from actuation_status in other nodes (e.g. raw_vehicle_cmd_converter)</td>
-<td align="left">[-]</td>
-</tr>
-</tbody>
-</table>
+<p>The simple_planning_simulator usually operates by receiving Control commands, but when the <code>ACTUATION_CMD*</code> model is selected, it receives Actuation commands instead of Control commands. This model can simulate the motion using the vehicle command that is actually sent to the real vehicle. Therefore, when this model is selected, the <code>raw_vehicle_cmd_converter</code> is also launched.
+Please refer to the <a href="docs/actuation_cmd_sim/">actuation_cmd_sim.md</a> for more details.</p>
 <!-- deadzone_delta_steer | double | dead zone for the steering dynamics                  | x      | x      | x        | o      | o      | 0.0      | [rad]         |         | -->
 
 <p><em>Note</em>: The steering/velocity/acceleration dynamics is modeled by a first order system with a deadtime in a <em>delay</em> model. The definition of the <em>time constant</em> is the time it takes for the step response to rise up to 63% of its final value. The <em>deadtime</em> is a delay in the response to a control input.</p>
@@ -14094,13 +14091,13 @@ In the simple_planning_simulator.launch.py, the node that outputs the <code>map<
         
         
           
-          <a href="../tier4_dummy_object_rviz_plugin/" class="md-footer__link md-footer__link--next" aria-label="Next: tier4_dummy_object_rviz_plugin" rel="next">
+          <a href="docs/actuation_cmd_sim/" class="md-footer__link md-footer__link--next" aria-label="Next: ACTUATION_CMD model" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                tier4_dummy_object_rviz_plugin
+                ACTUATION_CMD model
               </div>
             </div>
             <div class="md-footer__button md-icon">
